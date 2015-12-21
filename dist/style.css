@@ -1,0 +1,47 @@
+body {
+  font-family: 'Archivo Narrow', sans-serif;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 100vh;
+  background: #00c6ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #00c6ff , #0072ff); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #00c6ff , #0072ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-size: x-large;
+}
+
+.box {
+  height: 300px;
+  width: 400px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 10px 10px 31px -4px rgba(0,0,0,0.47);
+}
+
+h1 {
+  margin: 0 0 0 -71px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  margin: 6px;
+}
+
+span {
+  margin-left: 20px;
+}
+
+.blog-content {
+  margin-left: 22px;
+}

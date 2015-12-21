@@ -1,0 +1,35 @@
+{
+  "name": "personal-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "npm run build && npm run start-server",
+    "start-server": "http-server dist",
+    "test": "standard",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && mkdir dist && npm run build-html && npm run build-css && npm run build-js",
+    "build-html": "cp src/index.html dist/index.html",
+    "build-css": "cp src/style.css dist/style.css",
+    "build-js": "browserify src/app.js --outfile dist/app.js --transform babelify",
+    "watch": "npm run build && npm run watch-js & npm run watch-css & npm run watch-html & npm run start-server",
+    "watch-css": "watch-spawn --pattern 'src/style.css' npm run build-css",
+    "watch-html": "watch-spawn -p 'src/index.html' npm run build-html",
+    "watch-js": "watchify src/app.js --outfile dist/app.js --transform babelify --verbose"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4",
+    "standard": "^5.4.1",
+    "watch-spawn": "^1.0.6",
+    "watchify": "^3.6.1"
+  },
+  "dependencies": {
+    "express": "^4.13.3",
+    "express-history-api-fallback": "^2.0.0",
+    "http-server": "^0.8.5",
+    "webcomponents.js": "^0.7.20"
+  }
+}
