@@ -45,3 +45,8 @@ span {
 .blog-content {
   margin-left: 22px;
 }
+
+.external-links {
+  font-size: 40px;
+  margin: 10px 0 0 7px;
+}
