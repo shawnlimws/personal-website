@@ -3,16 +3,16 @@ body {
   display:flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
   height: 100vh;
   background: #00c6ff; /* fallback for old browsers */
   background: -webkit-linear-gradient(to left, #00c6ff , #0072ff); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to left, #00c6ff , #0072ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   font-size: x-large;
+  overflow: hidden;
 }
 
 .box {
-  height: 300px;
+  height: 280px;
   width: 400px;
   background: white;
   display: flex;
@@ -23,8 +23,28 @@ body {
   box-shadow: 10px 10px 31px -4px rgba(0,0,0,0.47);
 }
 
+.box.expand {
+  height: 85vh;
+  width: 70vw;
+  transition: 2s;
+  position: relative;
+}
+
+.boxContents {
+
+}
+
+.boxContents.fade {
+  opacity: 0;
+  transition: 1s;
+}
+
+.boxContents.fade.none {
+  display: none;
+}
+
 h1 {
-  margin: 0 0 0 -71px;
+  margin: 0 0 0 0;
 }
 
 .links {
@@ -42,11 +62,48 @@ span {
   margin-left: 20px;
 }
 
-.blog-content {
-  margin-left: 22px;
+.blogContent {
+  margin-left: 23px;
 }
 
-.external-links {
+.externalLinks {
   font-size: 40px;
-  margin: 10px 0 0 7px;
+  margin: 0 0 0 0;
+}
+
+.previousWork {
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 85vh;
+  width: 70vw;
+}
+
+.previousWork.back {
+  display: none;
+}
+
+.fa-times-circle-o {
+  position: absolute;
+}
+
+.seoWork {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 70vw;
+}
+
+.seoWork div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+img {
+  height: 150px;
+  width: 150px;
 }
